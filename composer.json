@@ -1,7 +1,6 @@
 {
   "name": "zertex/avatar-generator",
   "description": "Avatar generator by username, file or url.",
-  "version": "1.1.0",
   "keywords": ["userpic", "avatar"],
   "license": "BSD-3-Clause",
   "authors": [
