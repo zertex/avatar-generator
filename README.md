@@ -12,7 +12,7 @@ Generate avatar for user by his name, file or url.
 - Auto select background color by username
 - Contrast color for text
 - Font face and size customize 
-- Texture for background (2 available now)
+- Texture for background
 
 ## Dependencies
 
