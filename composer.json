@@ -1,0 +1,40 @@
+{
+  "name": "zertex/avatar-generator",
+  "description": "Avatar generator by username, file or url.",
+  "version": "1.1.0",
+  "keywords": ["userpic", "avatar"],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Egor Oldenburger",
+      "email": "egor@oldenburger.ru",
+      "homepage": "http://zertex.ru"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/zertex/avatar-generator/issues?state=open",
+    "source": "https://github.com/zertex/avatar-generator"
+  },
+  "require": {
+    "php": ">=7.0.0",
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "zertex\\avatar\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "zertex\\avatar\\tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
