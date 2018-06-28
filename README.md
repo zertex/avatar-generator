@@ -6,13 +6,13 @@ Generate avatar for user by his name, file or url.
 [![Total Downloads](https://poser.pugx.org/zertex/avatar-generator/downloads.png)](https://packagist.org/packages/zertex/avatar-generator)
 
 ## Features
-- PNG format
+- Saving to PNG format
 - Generate avatar by username
 - Generate avatar from file or url (http only)
 - Auto select background color by username
 - Contrast color for text
 - Font face and size customize 
-- Texture for background
+- PNG Textures for background
 
 ## Dependencies
 
@@ -99,6 +99,10 @@ TEXTURE_NAME . '-' . COLOR . '.png'
 ## Screenshot 
 
 ![alt text](http://zertex.ru/ext-banner-a3.png)
+
+## Yii2 extension
+
+Avater generator extension for Yii2 here: https://github.com/zertex/yii2-avatar-generator
 
 ## Examples
 
