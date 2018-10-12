@@ -104,6 +104,8 @@ TEXTURE_NAME . '-' . COLOR . '.png'
 
 Avater generator extension for Yii2 here: https://github.com/zertex/yii2-avatar-generator
 
+There you can find 2 textures and Play-Bold.ttf font
+
 ## Examples
 
 https://zertex.ru/yii2-avatar-generator

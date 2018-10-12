@@ -36,7 +36,10 @@ class Avatar
 		if (!file_exists($this->options->images_folder)) {
 			mkdir($this->options->images_folder, 0777, true);
 		}
-		imagepng($this->thumb($this->img, $this->options->width, $this->options->width), $origin);
+        $thumb = $this->thumb($this->img, $this->options->width, $this->options->width);
+        imagealphablending($thumb,false);
+        imagesavealpha($thumb,true);
+		imagepng($thumb, $origin);
 		imagedestroy($this->img);
 		return $this->options->images_url . '/' . $image_file;
 	}
