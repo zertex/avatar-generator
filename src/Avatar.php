@@ -54,8 +54,8 @@ class Avatar
 		$parts = explode(' ', $this->username);
 		$text = is_array($parts) && count($parts)>1 ? mb_substr($parts[0],0,1,"UTF-8") . mb_substr($parts[1],0,1,"UTF-8") : mb_substr($this->username,0,2,"UTF-8");
 		$box = imageftbbox( $this->options->font_size, 0, $this->options->font, $text);
-		$x = (500 - ($box[2] - $box[0])) / 2;
-		$y = (500 - ($box[1] - $box[7])) / 2;
+		$x = round((500 - ($box[2] - $box[0])) / 2);
+		$y = round((500 - ($box[1] - $box[7])) / 2);
 		$y -= $box[7];
 		imagettftext($this->img, $this->options->font_size, 0, $x, $y, $this->color_allocate, $this->options->font, $text);
 		return $this;
