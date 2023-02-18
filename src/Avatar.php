@@ -210,14 +210,14 @@ class Avatar
 		$origin_aspect = $origin_width / $origin_height;
 		$thumb_aspect = $width / $height;
 
-		if ( $origin_aspect >= $thumb_aspect ) {
-			$new_height = $height;
-			$new_width = $origin_width / ($origin_height / $height);
-		}
-		else {
-			$new_width = $width;
-			$new_height = $origin_height / ($origin_width / $width);
-		}
+        if ( $origin_aspect >= $thumb_aspect ) {
+            $new_height = $height;
+            $new_width = intval($origin_width / ($origin_height / $height));
+        }
+        else {
+            $new_width = $width;
+            $new_height = intval($origin_height / ($origin_width / $width));
+        }
 
 		$virtual = imagecreatetruecolor($width, $height);
 		imagealphablending($virtual,false);
@@ -227,14 +227,14 @@ class Avatar
 
 		imagealphablending( $img, false );
 		imagesavealpha( $img, true );
-		imagecopyresampled($virtual,
-			$img,
-			0 - (int) ($new_width - $width) / 2,
-			0 - (int) ($new_height - $height) / 2,
-			0, 0,
-			$new_width, $new_height,
-			$origin_width, $origin_height);
-		return $virtual;
+        imagecopyresampled($virtual,
+            $img,
+            0 - intval(($new_width - $width) / 2),
+            0 - intval(($new_height - $height) / 2),
+            0, 0,
+            $new_width, $new_height,
+            $origin_width, $origin_height);
+        return $virtual;
 	}
 
 	private function getMainColor($img, $palletSize=[16,8]){ // GET PALLET FROM IMAGE PLAY WITH INPUT PALLET SIZE
