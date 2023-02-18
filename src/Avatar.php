@@ -229,8 +229,8 @@ class Avatar
 		imagesavealpha( $img, true );
 		imagecopyresampled($virtual,
 			$img,
-			0 - ($new_width - $width) / 2,
-			0 - ($new_height - $height) / 2,
+			0 - (int) ($new_width - $width) / 2,
+			0 - (int) ($new_height - $height) / 2,
 			0, 0,
 			$new_width, $new_height,
 			$origin_width, $origin_height);
